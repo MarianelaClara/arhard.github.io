@@ -1,0 +1,95 @@
+:root {
+  --font: "Raleway", sans-serif;
+  --shiny-blue: #03a9f4;
+  --black-alpha-color: rgba(0, 0, 0, 0.6);
+  --dark-blue: #1c698d;
+  --light-blue: #c9dff1;
+  --gray-light-color: #f3f3f3;
+  --dark-color: #242424;
+  --card-osc-color: #817777;
+  --footer-color: #5c5c5c;
+}
+
+html {
+  font-family: var(--font);
+  font-size: 16px;
+}
+
+.hero-image {
+  background-image: url(heroImageMin.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-image-opacity {
+  background-color: var(--black-alpha-color);
+}
+
+.hero-image-title {
+  font-size: 7vw;
+}
+
+.hero-image-text {
+  font-size: 2vw;
+}
+
+.list-column-3 {
+  column-count: 3;
+  list-style: none;
+  column-rule: thin dotted var(--shiny-blue);
+}
+
+/** Modo oscuro **/
+
+.darkModeSwitch {
+  background: #3494b1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border: none;
+  border-radius: 1rem;
+}
+
+.darkModeSwitch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.darkModeSwitch::after {
+  content: "";
+  background: #fffbf5;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px var(--black-alpha-color);
+}
+
+.darkModeSwitch.active {
+  background: #fdd384;
+}
+
+.darkModeSwitch.active::after {
+  left: unset;
+  right: 0;
+}
+
+/** Modo oscuro **/
+
+@media screen and (min-width: 768px) {
+  .hero-image {
+    background-image: url(heroImage.jpg);
+  }
+}
+
+@media (hover: hover) {
+  .scale:hover {
+    transform: scale(1.1, 1.1);
+  }
+}
